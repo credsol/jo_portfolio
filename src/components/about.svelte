@@ -161,6 +161,9 @@
 	}
 	.cta-p.navy {
 		background: var(--navy);
+		color: var(--white);
+		padding: 5px;
+		border-radius: 5px;
 	}
 	.cta-g.navy {
 		border-color: rgba(8, 23, 46, 0.22);
