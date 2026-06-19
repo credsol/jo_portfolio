@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+	--navy: #08172e;
+	--navy2: #0f2340;
+	--navy3: #172f52;
+	--gold: #c4893a;
+	--gold2: #dba862;
+	--gold3: #f0d4a0;
+	--cream: #f8f4ee;
+	--white: #ffffff;
+	--ink: #111827;
+	--mid: #4b5563;
+	--soft: #9ca3af;
+	--serif: 'Cormorant Garamond', Georgia, serif;
+	--sans: 'Outfit', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: var(--sans);
+	background: var(--cream);
+	color: var(--ink);
+	overflow-x: hidden;
+}
+
+.section-head {
+	margin-bottom: 4.5rem;
+}
+.section-tag {
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--gold);
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	margin-bottom: 1rem;
+}
+.section-tag::before {
+	content: '';
+	width: 32px;
+	height: 1px;
+	background: var(--gold);
+}
+.section-h {
+	font-family: var(--serif);
+	font-size: clamp(2.2rem, 4vw, 3.4rem);
+	font-weight: 600;
+	line-height: 1.1;
+	color: var(--navy);
+}
+.section-h em {
+	font-style: italic;
+	color: var(--gold);
+}
