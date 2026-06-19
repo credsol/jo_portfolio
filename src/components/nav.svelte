@@ -17,20 +17,22 @@
 	<a href="#hero" class="nav-logo" on:click|preventDefault={() => smoothTo('#hero')}>
 		Jerry <b>Osagie</b>
 	</a>
-	<ul class="nav-links">
-		<li><a href="#about" on:click|preventDefault={() => smoothTo('#about')}>Story</a></li>
-		<li>
-			<a href="#expertise" on:click|preventDefault={() => smoothTo('#expertise')}>Expertise</a>
-		</li>
-		<li><a href="#speaking" on:click|preventDefault={() => smoothTo('#speaking')}>Speaking</a></li>
-		<li><a href="#books" on:click|preventDefault={() => smoothTo('#books')}>Books</a></li>
-		<li><a href="#media" on:click|preventDefault={() => smoothTo('#media')}>Insights</a></li>
-		<li>
-			<a href="#contact" class="nav-btn" on:click|preventDefault={() => smoothTo('#contact')}
-				>Connect</a
-			>
-		</li>
-	</ul>
+	<div class="flex items-center justify-center gap-2.5">
+		<ul class="nav-links">
+			<li><a href="#about" on:click|preventDefault={() => smoothTo('#about')}>Story</a></li>
+			<li>
+				<a href="#expertise" on:click|preventDefault={() => smoothTo('#expertise')}>Expertise</a>
+			</li>
+			<li>
+				<a href="#speaking" on:click|preventDefault={() => smoothTo('#speaking')}>Speaking</a>
+			</li>
+			<li><a href="#books" on:click|preventDefault={() => smoothTo('#books')}>Books</a></li>
+			<li><a href="#media" on:click|preventDefault={() => smoothTo('#media')}>Insights</a></li>
+		</ul>
+		<a href="#contact" class="nav-btn" on:click|preventDefault={() => smoothTo('#contact')}
+			>Connect</a
+		>
+	</div>
 </nav>
 
 <style>
@@ -72,6 +74,13 @@
 		gap: 2.5rem;
 		list-style: none;
 	}
+
+	@media (max-width: 1000px) {
+		.nav-links {
+			display: none;
+		}
+	}
+
 	.nav-links a {
 		font-size: 0.72rem;
 		font-weight: 500;
